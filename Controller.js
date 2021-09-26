@@ -3,7 +3,7 @@ const axios = require('axios');
 const {MakeupModel,MakeUp} = require('./Model')
 
 const getMakeup=(req,res)=>{
-    let url ='http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline'
+    let url =`${process.env.API}`
     axios.get(url).then(item=>{
         console.log(item.data)
         let makeupData = item.data

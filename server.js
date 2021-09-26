@@ -11,7 +11,7 @@ const {getMakeup,addMakeup,getData,deleteMakeup,updateMakeup} = require('./Contr
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://balqees:12345@cluster0-shard-00-00.oh7ji.mongodb.net:27017,cluster0-shard-00-01.oh7ji.mongodb.net:27017,cluster0-shard-00-02.oh7ji.mongodb.net:27017/MakeupDatabase?ssl=true&replicaSet=atlas-e444n5-shard-0&authSource=admin&retryWrites=true&w=majority');
+mongoose.connect(`${process.env.MONGOOSE}`);
 
 
 app.listen(PORT,()=>{
